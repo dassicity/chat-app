@@ -43,7 +43,38 @@
 
             <div class="right_sidebar">
                 <span class="room_label">Rooms</span>
-                <div id="active_rooms_list" class="active_rooms_list"></div>
+                <div id="active_rooms_list" class="active_rooms_list">
+
+                    <div class="room_card" id="global_chat" onclick="change_room('global_chat')">
+                        <div class="room_item_content">
+                            <div class="pic"></div>
+                            <div class="roomInfo">
+                                <span class="room_name">#global_chat</span>
+                                <span class="room_author">anon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="room_card" id="psychology" onclick="change_room('psychology')">
+                        <div class="room_item_content">
+                            <div class="pic"></div>
+                            <div class="roomInfo">
+                                <span class="room_name">#psychology</span>
+                                <span class="room_author">anon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="room_card" id="chess" onclick="change_room('chess')">
+                        <div class="room_item_content">
+                            <div class="pic"></div>
+                            <div class="roomInfo">
+                                <span class="room_name">#chess</span>
+                                <span class="room_author">anon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="room_input">
                     <input type="text" id="roomInput" placeholder="Create room" />

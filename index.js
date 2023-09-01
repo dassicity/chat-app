@@ -56,14 +56,14 @@ io.on("connection", (socket) => {
         socket.current_room = room;
         socket.join(room);
         socket.emit("update_chat", "INFO", "You have joined " + room + " room");
-        socket.broadcast.to(room).emit("update_chat", "INFO", socket.username + " has joined " + room + " room");
+        socket.to(room).emit("update_chat", "INFO", socket.username + " has joined " + room + " room");
     });
 
     socket.on("disconnect", function () {
         console.log(`User ${socket.username} disconnected from server.`);
         delete usernames[socket.username];
         io.sockets.emit("update_users", usernames);
-        socket.broadcast.emit("update_chat", "INFO", socket.username + " has disconnected");
+        socket.emit("update_chat", "INFO", socket.username + " has disconnected");
     });
 });
 
